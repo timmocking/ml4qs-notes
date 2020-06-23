@@ -4,9 +4,9 @@ Lecture notes for VU course "Machine Learning for the Quantified Self"
 ---
 
 * **Lecture 1**: Introduction, basics of sensory data [[notes]](https://github.com/timmocking/ml4qs-notes/blob/master/notes/lecture1.md)
-* **Lecture 2**: Handling sensory noise [notes]
-* **Lecture 3**: Feature engineering [notes]
-* **Lecture 4**: Clustering [notes]
-* **Lecture 5**: Fundamentals of supervised learning: predictive modeling without time [notes]
-* **Lecture 6**: Predictive modeling with time [notes]
+* **Lecture 2**: Handling sensory noise [[notes]](https://github.com/timmocking/ml4qs-notes/blob/master/notes/lecture2.md)
+* **Lecture 3**: Feature engineering [[notes]](https://github.com/timmocking/ml4qs-notes/blob/master/notes/lecture3.md)
+* **Lecture 4**: Clustering [[notes]](https://github.com/timmocking/ml4qs-notes/blob/master/notes/lecture4.md)
+* **Lecture 5**: Fundamentals of supervised learning: predictive modelling without time [notes]
+* **Lecture 6**: Predictive modelling with time [notes]
 * **Lecture 7**: Reinforcement learning [notes]

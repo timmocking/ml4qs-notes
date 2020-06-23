@@ -1,4 +1,4 @@
-## Lecture 1: Introduction, basics of sensory data
+# Lecture 1: Introduction, basics of sensory data
 
 *What is the quantified self?*
 
@@ -40,11 +40,7 @@ Forecasting and optimizing of the variables named above using machine learning m
 
 
 
----
-
-
-
-### Crowdsignals dataset
+## Crowdsignals dataset
 
 This dataset contains various time series measurements of users in association with activities. 
 
@@ -58,11 +54,7 @@ For example:
 
 
 
----
-
-
-
-### Aggregation of time-series data
+## Aggregation of time-series data
 
 Transforming of raw time series data is usually necessary to create useable, informative features. This can be done by taking a **step size** dT and combining all measurements within this step size using a certain method (summing, averaging, etc.).
 

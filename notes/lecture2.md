@@ -1,6 +1,6 @@
-## Lecture 2: Handling sensory noise
+# Lecture 2: Handling sensory noise
 
-### Removal of outliers
+## Removal of outliers
 
 An outlier is an observation point that is distant from other observations.
 
@@ -15,9 +15,9 @@ We can remove these using domain knowledge (e.g. heart rate cannot be over 220) 
 
 
 
-#### Distribution based outlier detection
+## Distribution based outlier detection
 
-**Chauvenet's criterion**
+### Chauvenet's criterion
 
 >  The idea behind Chauvenet's criterion is to find a probability band, centered on the mean of a normal distribution, that should reasonably contain all n samples of a data set.
 
@@ -33,7 +33,7 @@ Intuitively, this means that a larger *c* increases the denominator, decreasing 
 
 
 
-**Mixture models**
+### Mixture models
 
 Mixture models assume that the data can be described with K normal distributions.
 
@@ -43,7 +43,7 @@ This can be done using the expectation-maximization algorithm (EM).
 
 
 
-#### Distance based outlier detection
+### Distance based outlier detection
 
 Let *d*(X<sub>i</sub>, X<sub>j</sub>) represent the distance between two values of attribute *j*.
 
@@ -53,7 +53,7 @@ However, this approach does not take local density into account (imagine two clu
 
 
 
-**Local outlier factor**
+### Local outlier factor
 
 Local outlier factor compares the local density of a point with the densities of its neighbors. 
 
@@ -71,9 +71,9 @@ If LOF is ~1, then there is a similar density between a point and its neighbours
 
 For more information, see the [wikipedia page](https://en.wikipedia.org/wiki/Local_outlier_factor).
 
----
 
-### Imputation of missing values
+
+## Imputation of missing values
 
 Outliers can be removed, which leads to missing values. Naturally, most dataset also contain missing values from themselves.
 
@@ -91,7 +91,7 @@ An example of this could be k-nearest neighbour imputation (take the average of 
 
 
 
-**Kalman filters**
+### Kalman filters
 
 The Kalman filter estimates expected values based on historical data, and if the observed value deviates too much from this expectation (i.e. an outlier), we can impute this with the expected value. 
 
@@ -103,9 +103,9 @@ These are essentially predictions.
 
 <img src="https://www.bzarg.com/wp-content/uploads/2015/08/gauss_9.jpg" alt="gauss_9" style="zoom:40%;" align="left"/>
 
-***
 
-### Finding most useful information
+
+## Finding most useful information
 
 After imputation and removing outliers, there is often still residual noise in the data.
 
@@ -113,7 +113,7 @@ Various techniques exist to reduce this noise even further, such as lowpass filt
 
 
 
-**Lowpass filter**
+###  Lowpass filter
 
 If data has periodicity, series of values can be decomposed into different periodic signals (e.g. walking: 1 Hz, jogging: 2 Hz) with their own frequencies. 
 
@@ -121,11 +121,7 @@ Using lowpass filters, you can filter out higher frequency data (as opposed to t
 
 
 
-**Principal component analysis**
+### Principal component analysis
 
 This technique finds features that explain most of the variance in the data, which reduces noise to the background.
-
-
-
-### 
 
