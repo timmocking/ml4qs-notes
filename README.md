@@ -9,4 +9,4 @@ Lecture notes for VU course "Machine Learning for the Quantified Self"
 * **Lecture 4**: Clustering [[notes]](https://github.com/timmocking/ml4qs-notes/blob/master/notes/lecture4.md)
 * **Lecture 5**: Fundamentals of supervised learning: predictive modelling without time [[notes]](https://github.com/timmocking/ml4qs-notes/blob/master/notes/lecture5.md)
 * **Lecture 6**: Predictive modelling with time [[notes]](https://github.com/timmocking/ml4qs-notes/blob/master/notes/lecture6.md)
-* **Lecture 7**: Reinforcement learning [notes]
+* **Lecture 7**: Reinforcement learning [notes](https://github.com/timmocking/ml4qs-notes/blob/master/notes/lecture7.md)
