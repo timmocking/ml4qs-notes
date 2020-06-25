@@ -55,7 +55,7 @@ However, this approach does not take local density into account (imagine two clu
 
 ### Local outlier factor
 
-Local outlier factor compares the local density of a point with the densities of its neighbors. 
+Local outlier factor is a distance based outlier detection algorithm and considers the k closest neighbours around a point to determine whether it is an outlier. For those points it considers how far they are located from their closest neighbours and compares that to the distance of the current point to its neighbours. If the current point is much more distant from its neighbours compared to how distant its neighbours are to their neighbours the point is considered to be an outlier.
 
 Define a distance *k*<sub>dist</sub> for a point as the largest distance to one of its k closest neighbours. 
 
@@ -70,6 +70,33 @@ This is then compared to the reachability of neighbours, to define *local reacha
 If LOF is ~1, then there is a similar density between a point and its neighbours. If a point has a lower density than its neighbours (LOF > 1), then it is more likely to be an outlier.
 
 For more information, see the [wikipedia page](https://en.wikipedia.org/wiki/Local_outlier_factor).
+
+
+
+### Example
+
+Consider the dataset [1; 1; 2; 2; 3; **10**; 20; 20; 21; 22; 22; 23; 34]
+
+Is the value 10 an outlier?
+
+
+
+*Chauvenet's criterion*: 
+
+The mean is 13, and 10 falls comfortably within the standard deviation, so 10 is not an outlier.
+
+
+
+*A mixture model with K = 2*:
+
+Mixture model with K = 2: an outlier, two distributions will be fitted, one focusing on the low values, and one on the high values, hence, the probability of observing 10 will be very low according to those two
+distributions.
+
+
+
+*Distance based approach with dmin=5 and fmin=0.9*:
+
+Consider again that *fmin* determines the fraction of points that should be within *dmin*. However, for our example, none of the points are within *dmin* so 10 can be considered an outlier.
 
 
 
@@ -115,9 +142,9 @@ Various techniques exist to reduce this noise even further, such as lowpass filt
 
 ###  Lowpass filter
 
-If data has periodicity, series of values can be decomposed into different periodic signals (e.g. walking: 1 Hz, jogging: 2 Hz) with their own frequencies. 
+Lowpass filters are a good technique to out filter high frequency data.  This is done using a cut-off frequency, where frequencies higher than the cut-off will be removed to a certain extent.
 
-Using lowpass filters, you can filter out higher frequency data (as opposed to the highpass filter, which filters out lower frequency data). This is done using a cut-off frequency, where frequencies higher than the cut-off will be removed to a certain extent.
+
 
 
 

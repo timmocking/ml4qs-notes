@@ -13,6 +13,16 @@
 
 
 
+Gimpel *et al.* identify the five-factor framework for the quantified self.
+
+* Self-healing
+* Self-discipline
+* Self-design
+* Self-association
+* Self-entertainment
+
+
+
 *What kind of measurements fall under the quantified self?*
 
 * Physical activity
@@ -63,11 +73,15 @@ There are pros and cons of taking different step sizes.
 **Increasing step size** 
 
 * (+) Reduces amount of missing values
+* (+) Less noise
+* (+) Decreases computational time
 * (-) Possible loss of patterns with a smaller scale
 
 **Decreasing step size**
 
 * (+) Captures small-scale patterns more effectively
+* (-) More noise
+* (-) Increases computational time
 * (-) Can increase amount of missing values
 
-Finding an ideal step size is often done using trial-and-error. Effectively its a trade-off between useful patterns vs. noise + missing values.
+Finding an ideal step size is often done using trial-and-error. 

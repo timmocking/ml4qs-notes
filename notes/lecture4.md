@@ -106,11 +106,13 @@ High values of this coefficient occur when two datasets overlap, which is desira
 
 In dynamic time-warping we make the best pairs of instances in sequences to find the minimum distance.
 
-There are a number of requirements for pairing:
 
-* Time order should be preserved (monotonicity condition)
-  * We can go up, right or diagonal
-* First and last points should be matched (boundary condition)
+
+There are two conditions for matching time points in DTW:
+
+​	1)  **Monotonicity condition**: Time order should be preserved. (when making matches you can only move 		  forward in time or remain at the same time point and not go back in time)
+
+​	2)  **Boundary condition**: First and last points should be matched
 
 
 
@@ -229,7 +231,7 @@ The cluster C we evaluate next is the one with the biggest diameter.
 
 ### Subspace clustering
 
-Most clustering techniques don't handle large numbers of features. 
+Most clustering techniques don't handle large numbers of features very well and create a lot of unmeaningful clusters. Rather than looking at the entire set of features, subspace clustering tries to find interesting clusters in subsets of features based on intervals per feature and only splitting up further based on more features when there are intervals that are sufficiently dense.
 
 In the first step, we create intervals for every feature, creating a grid of so-called *units*. 
 
